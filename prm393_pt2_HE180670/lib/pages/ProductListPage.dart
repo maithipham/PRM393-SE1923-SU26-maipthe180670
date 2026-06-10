@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../entities/product.dart';
-import '../../repositories/productDao.dart';
+import '../entities/product.dart';
+import '../repositories/productDao.dart';
 
 class ProductListPage extends StatefulWidget {
   final Function(Product) onProductSelected;
