@@ -18,12 +18,12 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
-     if (Product.listProducts.isNotEmpty) {
+    if (Product.listProducts.isNotEmpty) {
       _selectedProduct = Product.listProducts[0];
     }
   }
 
-   String _getAppBarTitle() {
+  String _getAppBarTitle() {
     switch (_currentIndex) {
       case 0:
         return 'Products';
@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
-     final List<Widget> _screens = [
+    final List<Widget> _screens = [
       ProductListPage(
         onProductSelected: (product) {
           setState(() {
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
     ];
 
     return Scaffold(
-       appBar: AppBar(
+      appBar: AppBar(
         title: Text(
           _getAppBarTitle(),
           style: const TextStyle(fontWeight: FontWeight.bold),
@@ -61,7 +61,7 @@ class _HomeScreenState extends State<HomeScreen> {
         backgroundColor: Colors.blue,
         foregroundColor: Colors.white,
 
-         leading: _currentIndex != 0
+        leading: _currentIndex != 0
             ? IconButton(
           icon: const Icon(Icons.arrow_back),
           onPressed: () {

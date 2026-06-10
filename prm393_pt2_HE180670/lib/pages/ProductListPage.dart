@@ -25,7 +25,7 @@ class _ProductListPageState extends State<ProductListPage> {
   Widget build(BuildContext context) {
     return Column(
       children: [
-         Padding(
+        Padding(
           padding: const EdgeInsets.only(left: 12.0, right: 12.0, top: 12.0, bottom: 4.0),
           child: TextField(
             decoration: InputDecoration(
